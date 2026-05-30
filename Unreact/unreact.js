@@ -37,3 +37,7 @@ let unreactRender = (reactElement, elementContainer) => {
 }
 
 unreactRender(reactElement, elementContainer);
+
+/*
+More or less, this is the way in which react renders the jsx syntax...basically the jsx is converted into tree like structure by the bundlers like bable which is later processed by react in this manner under the hood
+*/
