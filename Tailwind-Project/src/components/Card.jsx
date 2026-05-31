@@ -22,7 +22,7 @@ const Card = (props) => {
 */
 
 // Destructuring approach
-const Card = ({tittle, description}) => {
+const Card = ({tittle, description = "These are very nice shoes"}) => {
   return (
       <div className="card bg-base-100 w-96 shadow-sm">
       <figure>
@@ -40,5 +40,7 @@ const Card = ({tittle, description}) => {
     </div>
   )
 }
+
+// also you can give any default value to any property if you want as above
 
 export default Card
