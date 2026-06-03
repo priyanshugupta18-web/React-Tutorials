@@ -6,8 +6,9 @@ import useCurrencyInfo from "./Hooks/useCurrencyInfo";
 const App = () => {
   let [fromCurrency, setFromCurrency] = useState("usd");
   let [toCurrency, setToCurrency] = useState("inr");
-  let [amount, setAmount] = useState("")
+  let [amount, setAmount] = useState("");
   let [ConvertedAmount, setConvertedAmount] = useState("");
+  let [swap, setSwap] = useState("↑↓");
 
   let data = useCurrencyInfo(fromCurrency);
 
@@ -22,6 +23,9 @@ const App = () => {
           flexDirection: "column",
         }}
       >
+        <h1 className="my-10 text-4xl font-extrabold tracking-tight text-grey-900 md:text-6xl">
+          Currency Convertor
+        </h1>
         <InputCard
           source="From"
           CurrentVal={fromCurrency}
@@ -50,9 +54,12 @@ const App = () => {
             onClick={() => {
               setFromCurrency(toCurrency);
               setToCurrency(fromCurrency);
+              if (swap === "↑↓") setSwap("↓↑");
+              else setSwap("↑↓");
+              setConvertedAmount("");
             }}
           >
-            ⇅
+            {swap}
           </button>
         </div>
         <InputCard
@@ -64,14 +71,14 @@ const App = () => {
           setAmount=""
           placeHolder={`Converted Amount in ${toCurrency.toUpperCase()}`}
         />
-        <button className="w-120 my-4 p-5 btn btn-info font-medium text-lg rounded-lg" 
-        onClick = {
-          () => (
+        <button
+          className="w-120 my-4 p-5 btn btn-info font-medium text-lg rounded-lg"
+          onClick={() =>
             // setConvertedAmount(Number(amount)*Number(data.fromCurrency[toCurrency]))
             setConvertedAmount(Number(amount) * Number(data[toCurrency]))
-          )
-        }
-        >Convert {fromCurrency.toUpperCase()} to {toCurrency.toUpperCase()}
+          }
+        >
+          Convert {fromCurrency.toUpperCase()} to {toCurrency.toUpperCase()}
         </button>
       </div>
       <img
