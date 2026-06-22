@@ -23,7 +23,7 @@ const App = () => {
           flexDirection: "column",
         }}
       >
-        <h1 className="my-10 text-4xl font-extrabold tracking-tight text-grey-900 md:text-6xl">
+        <h1 className="my-10 text-4xl font-extrabold tracking-tight text-grey-900 md:text-6xl backdrop-blur-sm bg-white/10 px-4 py-2 rounded-xl">
           Currency Convertor
         </h1>
         <InputCard
