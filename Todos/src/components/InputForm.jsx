@@ -1,0 +1,33 @@
+import React, { useState } from "react";
+import { useTodo } from "../contexts";
+
+function InputForm() {
+  let { addTodo } = useTodo();
+  const [msg, setMsg] = useState("");
+
+  return (
+    <form className="flex items-center gap-5 text-white">
+      <input
+        type="text"
+        value={msg}
+        onChange={(e) => {
+          setMsg(e.target.value);
+        }}
+        className="p-2 outline-none border border-white/10 rounded-xl"
+        placeholder="write you todo"
+      />
+      <button
+        onClick={(e) => {
+          e.preventDefault();
+          addTodo({ id: Date.now(), title: msg, isCompleted: false });
+          setMsg("");
+        }}
+        className="bg-indigo-400 cursor-pointer px-3 py-2 rounded-lg"
+      >
+        Add
+      </button>
+    </form>
+  );
+}
+
+export default InputForm;

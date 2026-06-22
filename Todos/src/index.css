@@ -1,0 +1,9 @@
+@import 'tailwindcss';
+
+body{
+  @apply bg-slate-800;
+}
+
+*{
+  box-sizing: border-box;
+}
