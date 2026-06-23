@@ -34,7 +34,7 @@ function App() {
 
   return (
     <div className="w-full">
-      <div className="mx-auto mt-10 text-3xl w-72 md:text-5xl text-white md:w-115">
+      <div className="mx-auto mt-10 text-2xl w-65 md:text-5xl text-white md:w-115">
         Save Your Toods Here
       </div>
       <div className="md:max-w-sm max-w-xs mx-auto min-h-60 bg-white/[0.03] border rounded-2xl border-white/10 backdrop-blur-md-blur-md my-25 md:px-10 px-7 pt-5">
