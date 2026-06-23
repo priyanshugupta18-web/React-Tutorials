@@ -1,0 +1,7 @@
+{
+  "name": "react-tutorials",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build-all.cjs"
+  }
+}
