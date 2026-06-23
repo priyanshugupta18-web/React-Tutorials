@@ -6,8 +6,16 @@ function InputForm() {
   const [msg, setMsg] = useState("");
 
   return (
-    <form className="flex items-center gap-5 text-white">
+    <form
+      className="flex items-center gap-5 text-white"
+      onSubmit={(e) => {
+        e.preventDefault();
+        addTodo({ id: Date.now(), title: msg, isCompleted: false });
+        setMsg("");
+      }}
+    >
       <input
+        required
         type="text"
         value={msg}
         onChange={(e) => {
@@ -17,11 +25,7 @@ function InputForm() {
         placeholder="write you todo"
       />
       <button
-        onClick={(e) => {
-          e.preventDefault();
-          addTodo({ id: Date.now(), title: msg, isCompleted: false });
-          setMsg("");
-        }}
+        type="submit"
         className="bg-indigo-400 cursor-pointer px-3 py-2 rounded-lg"
       >
         Add
