@@ -13,14 +13,12 @@ const InputCard = ({
   const currencies = useOptions();
 
   return (
-    <div className="card glass w-120 bg-base-100 card-md shadow-sm">
-      <div className="card-body flex flex-row items-center justify-between">
+    <div className="md:w-120 w-65 bg-white/[0.03] text-white border border-white/10 backdrop-blur-md rounded-2xl shadow-sm">
+      <div className="card-body flex items-center justify-between">
         <div>
-          <h2 className="card-title">{source}</h2>
+          <h2 className="ml-5 mt-5 text-lg font-semibold tracking-wider">{source}</h2>
           <select
-            className="select select-info w-30 mt-10 focus:outline-none
-                focus:ring-0
-                focus:ring-offset-0"
+            className="md:w-30 w-16 mt-10 md:text-[16px] text-sm focus:outline-none text-blue-400 border rounded-md border-white/10 p-2 backdrop-blur-md ml-5 mb-5"
             value={CurrentVal}
             onChange={(e) => {
               setCurrentVal(e.target.value);
@@ -49,10 +47,8 @@ const InputCard = ({
             onChange={
               source === "From" ? (e) => setAmount(e.target.value) : undefined
             }
-            className="input validator no-spinner
-                border-sky-500 focus:outline-none
-                focus:ring-0
-                focus:ring-offset-0 mt-10 w-50"
+            className="input p-2 outline-none border border-white/10 backdrop-blur-md bg-white/[0.03] rounded-md no-spinner
+                mt-10 md:w-40 w-21 mr-5 md:text-[16px] text-sm"
           />
         </div>
       </div>

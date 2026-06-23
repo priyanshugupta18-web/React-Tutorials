@@ -1,5 +1,5 @@
 {
-  "name": "react-tutorials",
+  "name": "projects-library",
   "private": true,
   "scripts": {
     "build": "node scripts/build-all.cjs"

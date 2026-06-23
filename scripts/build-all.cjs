@@ -8,51 +8,9 @@ const npmCommand = "npm";
 
 const projects = [
   {
-    name: "Background Color Changer",
-    folder: "bgColorChanger",
-    route: "bg-color-changer",
-    type: "vite",
-  },
-  {
-    name: "Counter",
-    folder: "Counter",
-    route: "counter",
-    type: "vite",
-  },
-  {
     name: "Currency Convertor",
     folder: "currencyConvertor",
     route: "currency",
-    type: "vite",
-  },
-  {
-    name: "Password Generator",
-    folder: "passwordGenerator",
-    route: "password",
-    type: "vite",
-  },
-  {
-    name: "React Vite",
-    folder: "react@vite",
-    route: "react-vite",
-    type: "vite",
-  },
-  {
-    name: "React At Default",
-    folder: "reactatdefault",
-    route: "react-at-default",
-    type: "cra",
-  },
-  {
-    name: "Tailwind Project",
-    folder: "Tailwind-Project",
-    route: "tailwind-project",
-    type: "vite",
-  },
-  {
-    name: "Theme Switcher",
-    folder: "themeSwitcher",
-    route: "theme-switcher",
     type: "vite",
   },
   {
@@ -62,10 +20,16 @@ const projects = [
     type: "vite",
   },
   {
-    name: "Unreact",
-    folder: "Unreact",
-    route: "unreact",
-    type: "static",
+    name: "Password Generator",
+    folder: "passwordGenerator",
+    route: "password",
+    type: "vite",
+  },
+  {
+    name: "bgColorChanger",
+    folder: "bgColorChanger",
+    route: "bg-color-changer",
+    type: "vite",
   },
 ];
 
@@ -149,7 +113,7 @@ function createIndexPage() {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>React Tutorials</title>
+    <title>Projects Library</title>
     <style>
       :root {
         color-scheme: light dark;
@@ -240,7 +204,7 @@ function createIndexPage() {
   </head>
   <body>
     <main>
-      <h1>React Tutorials</h1>
+      <h1>Projects Library</h1>
       <p>Choose a project. Each folder is built separately and published under its own route.</p>
       <div class="project-grid">${links}
       </div>

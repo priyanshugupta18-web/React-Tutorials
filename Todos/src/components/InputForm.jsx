@@ -21,7 +21,7 @@ function InputForm() {
         onChange={(e) => {
           setMsg(e.target.value);
         }}
-        className="p-2 outline-none border border-white/10 w-30 md:w-50 rounded-xl"
+        className="p-2 outline-none border border-white/10 w-40 md:w-50 rounded-xl"
         placeholder="write you todo"
       />
       <button

@@ -13,19 +13,10 @@ const App = () => {
   let data = useCurrencyInfo(fromCurrency);
 
   return (
-    <div className="h-screen w-full bg-[#0f172a]" style={{ display: "flex" }}>
+    <div className="h-screen overflow-x-hidden w-full bg-slate-800 flex">
       <div
-        className="w-2/3"
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          flexDirection: "column",
-        }}
+        className="flex justify-center items-center flex-col lg:w-2/3 w-full"
       >
-        <h1 className="my-10 text-4xl font-extrabold tracking-tight text-grey-900 md:text-6xl backdrop-blur-sm bg-white/10 px-4 py-2 rounded-xl">
-          Currency Convertor
-        </h1>
         <InputCard
           source="From"
           CurrentVal={fromCurrency}
@@ -33,23 +24,20 @@ const App = () => {
           isDisabled={false}
           amount={amount}
           setAmount={setAmount}
-          placeHolder={`Enter the Amount in ${fromCurrency.toUpperCase()}`}
+          placeHolder={`${fromCurrency.toUpperCase()}`}
         />
         <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
+          className="flex justify-center items-center"
         >
-          <h2 className="mx-1 font-medium text-lg">Swap</h2>
+          <h2 className="mx-1 font-medium text-white text-lg">Swap</h2>
           <button
             className="
-            btn
-            btn-circle
-            btn-info
+            bg-blue-500
+            rounded-full
+            text-white
             shadow-lg
-            my-1
+            m-2
+            p-2
   "
             onClick={() => {
               setFromCurrency(toCurrency);
@@ -69,10 +57,10 @@ const App = () => {
           isDisabled={false}
           amount={ConvertedAmount}
           setAmount=""
-          placeHolder={`Converted Amount in ${toCurrency.toUpperCase()}`}
+          placeHolder={`${toCurrency.toUpperCase()}`}
         />
         <button
-          className="w-120 my-4 p-5 btn btn-info font-medium text-lg rounded-lg"
+          className="md:w-120 w-65 my-4 p-5 text-white bg-blue-500 font-medium text-lg rounded-lg"
           onClick={() =>
             // setConvertedAmount(Number(amount)*Number(data.fromCurrency[toCurrency]))
             setConvertedAmount(Number(amount) * Number(data[toCurrency]))
@@ -84,8 +72,7 @@ const App = () => {
       <img
         src="https://images.unsplash.com/photo-1523299652504-84129441a887?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwcm9maWxlLXBhZ2V8NjV8fHxlbnwwfHx8fHw%3D"
         alt="Stock-market-image"
-        className="h-screen w-1/3 "
-        style={{ objectFit: "cover" }}
+        className="h-screen w-1/3 hidden lg:block object-cover "
       />
     </div>
   );

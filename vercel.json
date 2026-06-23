@@ -5,44 +5,20 @@
   "trailingSlash": true,
   "rewrites": [
     {
-      "source": "/bg-color-changer/:path*",
-      "destination": "/bg-color-changer/index.html"
-    },
-    {
-      "source": "/counter/:path*",
-      "destination": "/counter/index.html"
-    },
-    {
       "source": "/currency/:path*",
       "destination": "/currency/index.html"
-    },
-    {
-      "source": "/password/:path*",
-      "destination": "/password/index.html"
-    },
-    {
-      "source": "/react-vite/:path*",
-      "destination": "/react-vite/index.html"
-    },
-    {
-      "source": "/react-at-default/:path*",
-      "destination": "/react-at-default/index.html"
-    },
-    {
-      "source": "/tailwind-project/:path*",
-      "destination": "/tailwind-project/index.html"
-    },
-    {
-      "source": "/theme-switcher/:path*",
-      "destination": "/theme-switcher/index.html"
     },
     {
       "source": "/todos/:path*",
       "destination": "/todos/index.html"
     },
     {
-      "source": "/unreact/:path*",
-      "destination": "/unreact/index.html"
+      "source": "/password/:path*",
+      "destination": "/password/index.html"
+    },
+    {
+      "source": "/bg-color-changer/:path*",
+      "destination": "/bg-color-changer/index.html"
     }
   ]
 }
