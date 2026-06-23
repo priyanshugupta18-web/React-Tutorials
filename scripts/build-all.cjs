@@ -96,11 +96,7 @@ function ensureDependencies(projectDir) {
     return;
   }
 
-  const installCommand = fs.existsSync(path.join(projectDir, "package-lock.json"))
-    ? "ci"
-    : "install";
-
-  run(npmCommand, [installCommand], projectDir);
+  run(npmCommand, ["install"], projectDir);
 }
 
 function copyDirectory(from, to) {
