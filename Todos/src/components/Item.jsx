@@ -14,6 +14,7 @@ function Item({ dataItem }) {
       <div className="px-2 py-1 rounded-md border border-white/10 backdrop-blur-md">
         <input
           type="checkbox"
+          disabled={editable}
           value={status}
           onClick={(e) => {
             setStatus(e.target.checked);
