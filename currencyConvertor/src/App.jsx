@@ -13,7 +13,7 @@ const App = () => {
   let data = useCurrencyInfo(fromCurrency);
 
   return (
-    <div className="h-screen overflow-x-hidden w-full bg-slate-800 flex">
+    <div className="h-screen overflow-hidden w-full bg-slate-800 flex">
       <div
         className="flex justify-center items-center flex-col lg:w-2/3 w-full"
       >
@@ -60,7 +60,7 @@ const App = () => {
           placeHolder={`${toCurrency.toUpperCase()}`}
         />
         <button
-          className="md:w-120 w-65 my-4 p-5 text-white bg-blue-500 font-medium text-lg rounded-lg"
+          className="md:w-120 w-65 my-4 p-3 text-white bg-blue-500 font-medium text-lg rounded-lg"
           onClick={() =>
             // setConvertedAmount(Number(amount)*Number(data.fromCurrency[toCurrency]))
             setConvertedAmount(Number(amount) * Number(data[toCurrency]))
