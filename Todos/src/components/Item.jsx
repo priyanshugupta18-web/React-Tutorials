@@ -8,22 +8,16 @@ function Item({ dataItem }) {
   const [todoMsg, setTodoMsg] = useState(dataItem.title);
   const [editable, setEditable] = useState(false);
   const [status, setStatus] = useState(dataItem.isCompleted);
-  useEffect(() => {
-    if (status) {
-      document.querySelector(".toggler").setAttribute("disabled", true);
-    } else {
-      document.querySelector(".toggler").removeAttribute("disabled");
-    }
-  }, [status]);
 
   return (
-    <div className="flex border border-white/10 backdrop-blur-md text-white md:text-[16px] text-xs font-light tracking-wider md:w-80 w-65 my-5 p-2 rounded-xl gap-2 items-center">
+    <div className="flex border border-white/10 backdrop-blur-md text-white md:text-[16px] text-xs font-light tracking-wider md:w-80 w-70 my-5 p-2 rounded-xl gap-2 items-center">
       <div className="px-2 py-1 rounded-md border border-white/10 backdrop-blur-md">
         <input
           type="checkbox"
           value={status}
           onClick={(e) => {
             setStatus(e.target.checked);
+            // console.log(status);
           }}
         />
       </div>
@@ -41,6 +35,7 @@ function Item({ dataItem }) {
         className={`w-30 outline-none md:w-45 border-none ${editable ? "block" : "hidden"}`}
       />
       <button
+        disabled={status}
         className={`toggler border cursor-pointer border-white/10 p-2 rounded-md backdrop-blur-md ${status ? "text-gray-500" : "text-white"}`}
         onClick={() => {
           if (editable) {
@@ -48,7 +43,7 @@ function Item({ dataItem }) {
               updateTodo(todoMsg, dataItem.id);
             }
             else{
-              alert("I Won't let you flood your own localStorage 😅");
+              alert("I am not a noob developer 😅");
             }
           }
           setEditable(!editable);
