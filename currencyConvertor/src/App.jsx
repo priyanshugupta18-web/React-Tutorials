@@ -13,7 +13,7 @@ const App = () => {
   let data = useCurrencyInfo(fromCurrency);
 
   return (
-    <div className="min-h-screen overflow-x-hidden w-full bg-slate-800 flex">
+    <div className="min-h-[100dvh] overflow-x-hidden w-full bg-slate-800 flex">
       <div
         className="flex justify-center items-center flex-col lg:w-2/3 w-full px-4"
       >
@@ -24,7 +24,7 @@ const App = () => {
           isDisabled={false}
           amount={amount}
           setAmount={setAmount}
-          placeHolder={`${fromCurrency.toUpperCase()}`}
+          placeHolder={`Amount in ${fromCurrency.toUpperCase()}`}
         />
         <div
           className="flex justify-center items-center"
@@ -57,7 +57,7 @@ const App = () => {
           isDisabled={false}
           amount={ConvertedAmount}
           setAmount=""
-          placeHolder={`${toCurrency.toUpperCase()}`}
+          placeHolder={`Amount in ${toCurrency.toUpperCase()}`}
         />
         <button
           className="w-full max-w-md my-4 px-4 py-3 text-white bg-blue-500 font-medium text-base sm:text-lg rounded-lg"
