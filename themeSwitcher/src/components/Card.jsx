@@ -1,8 +1,13 @@
-import React from "react";
+import React, {useEffect} from "react";
+import useTheme from "../contexts/Theme";
 
 const Card = () => {
+  let {theme, setTheme} = useTheme();
+  useEffect(() => {
+    document.querySelector(".card").setAttribute("data-theme", theme)
+  }, [theme])
   return (
-    <div className="w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div className="card w-full max-w-md bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
       <a href="/">
         <img
           className="p-8 rounded-t-lg"

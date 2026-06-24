@@ -5,12 +5,16 @@ import Card from './components/Card'
 
 
 function App() {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('dark');
   return (
-    <ThemeProvider value={{theme, setTheme}}>
-      <Btn />
-      <Card />
-    </ThemeProvider>
+    <div className="h-screen flex justify-center items-center">
+      <ThemeProvider value={{theme, setTheme}}>
+        <div>
+          <Btn />
+          <Card />
+        </div>
+      </ThemeProvider>
+    </div>
   )
 }
 
