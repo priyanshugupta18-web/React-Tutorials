@@ -22,7 +22,7 @@ function InputForm() {
           setMsg(e.target.value);
         }}
         className="p-2 outline-none border border-white/10 w-40 md:w-50 rounded-xl"
-        placeholder="write you todo"
+        placeholder="write your todo"
       />
       <button
         type="submit"

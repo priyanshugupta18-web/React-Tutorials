@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import { InputForm } from "./components";
-import MenuItems from "./components/MenuItems";
+import { InputForm, MenuItems } from "./components";
 import { TodoProvider, useTodo } from "./contexts";
 
 function App() {

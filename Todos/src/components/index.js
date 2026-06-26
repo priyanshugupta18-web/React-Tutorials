@@ -1,3 +1,4 @@
 import InputForm from "./InputForm";
+import MenuItems from "./MenuItems";
 
-export {InputForm};
+export { InputForm, MenuItems };
